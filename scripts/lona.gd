@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var body: AnimatedSprite2D = $body
+@onready var top_clothes: AnimatedSprite2D = $top_clothes
 
 var last_direction: Vector2 = Vector2.DOWN
 
@@ -18,22 +19,30 @@ func _physics_process(delta):
 	if direction != Vector2.ZERO:
 		last_direction = direction
 		if direction.y > 0:
-			animated_sprite.play("run_down")
+			body.play("run_down")
+			top_clothes.play("run_down")
 		elif direction.y < 0:
-			animated_sprite.play("run_up")
+			body.play("run_up")
+			top_clothes.play("run_up")
 		if direction.x > 0:
-			animated_sprite.play("run_right")
+			body.play("run_right")
+			top_clothes.play("run_right")
 		elif direction.x < 0:
-			animated_sprite.play("run_left")
+			body.play("run_left")
+			top_clothes.play("run_left")
 	else:
 		if last_direction.y > 0:
-			animated_sprite.play("idle_down")
+			body.play("idle_down")
+			top_clothes.play("idle_down")
 		elif last_direction.y < 0:
-			animated_sprite.play("idle_up")
+			body.play("idle_up")
+			top_clothes.play("idle_up")
 		elif last_direction.x > 0:
-			animated_sprite.play("idle_right")
+			body.play("idle_right")
+			top_clothes.play("idle_right")
 		elif last_direction.x < 0:
-			animated_sprite.play("idle_left")
+			body.play("idle_left")
+			top_clothes.play("idle_left")
 
 	# normalize the directional movement
 	direction = direction.normalized()
