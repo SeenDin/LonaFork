@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=4 uid="uid://vx0dgrr1ir0u"]
+[gd_scene load_steps=22 format=4 uid="uid://vx0dgrr1ir0u"]
 
 [ext_resource type="PackedScene" uid="uid://bv11epc1aasp" path="res://lona.tscn" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b6bnl832kbwb2" path="res://assets/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bhwpcco0ey8o2" path="res://assets/lona_fr_fr/Inside_A5.png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://ch4mr41gskatv" path="res://assets/lona_fr_fr/Inside_B.png" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://s0pcgkxiypy5" path="res://exit.tscn" id="5_lquwl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("1_h2yge")
@@ -1751,13 +1752,6 @@ sources/1 = SubResource("TileSetAtlasSource_272bh")
 atlas = ExtResource("3_lquwl")
 region = Rect2(288, 256, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
-atlas = ExtResource("3_lquwl")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
 atlas = ExtResource("3_lquwl")
 region = Rect2(256, 352, 32, 32)
@@ -1800,15 +1794,6 @@ tile_set = SubResource("TileSet_5vw27")
 position = Vector2(96, -16)
 texture = SubResource("AtlasTexture_h2yge")
 
-[node name="Area2D2" type="Area2D" parent="room"]
-position = Vector2(112, 48)
-
-[node name="steps" type="Sprite2D" parent="room/Area2D2"]
-texture = SubResource("AtlasTexture_1bvp3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room/Area2D2"]
-shape = SubResource("RectangleShape2D_h2yge")
-
 [node name="Area2D" type="Area2D" parent="room"]
 
 [node name="bucket" type="Sprite2D" parent="room/Area2D"]
@@ -1827,3 +1812,6 @@ texture = SubResource("AtlasTexture_7mycd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room/bed/Area2D"]
 shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Exit" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(112, 48)
