@@ -10,6 +10,10 @@ const SPEED = 100.0
 
 var last_direction: Vector2 = Vector2.DOWN
 
+@onready var animated_sprites := [body, top_clothes, jeans, head, haircut]
+
+
+
 func _physics_process(delta):
 	# setup direction of movement
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -18,58 +22,35 @@ func _physics_process(delta):
 		direction.y = 0
 	elif Input.is_action_pressed("move_up") || Input.is_action_pressed("move_down"):
 		direction.x = 0
-	
+
+
 	if direction != Vector2.ZERO:
 		last_direction = direction
 		if direction.y > 0:
-			body.play("run_down")
-			top_clothes.play("run_down")
-			jeans.play("run_down")
-			head.play("run_down")
-			haircut.play("run_down")
+			for sprite in animated_sprites:
+				sprite.play("run_down")
 		elif direction.y < 0:
-			body.play("run_up")
-			top_clothes.play("run_up")
-			jeans.play("run_up")
-			head.play("run_up")
-			haircut.play("run_up")
+			for sprite in animated_sprites:
+				sprite.play("run_up")
 		if direction.x > 0:
-			body.play("run_right")
-			top_clothes.play("run_right")
-			jeans.play("run_right")
-			head.play("run_right")
-			haircut.play("run_right")
+			for sprite in animated_sprites:
+				sprite.play("run_right")
 		elif direction.x < 0:
-			body.play("run_left")
-			top_clothes.play("run_left")
-			jeans.play("run_left")
-			head.play("run_left")
-			haircut.play("run_left")
+			for sprite in animated_sprites:
+				sprite.play("run_left")
 	else:
 		if last_direction.y > 0:
-			body.play("idle_down")
-			top_clothes.play("idle_down")
-			jeans.play("idle_down")
-			head.play("idle_down")
-			haircut.play("idle_down")
+			for sprite in animated_sprites:
+				sprite.play("run_down")
 		elif last_direction.y < 0:
-			body.play("idle_up")
-			top_clothes.play("idle_up")
-			jeans.play("idle_up")
-			head.play("idle_up")
-			haircut.play("idle_up")
+			for sprite in animated_sprites:
+				sprite.play("idle_up")
 		elif last_direction.x > 0:
-			body.play("idle_right")
-			top_clothes.play("idle_right")
-			jeans.play("idle_right")
-			head.play("idle_right")
-			haircut.play("idle_right")
+			for sprite in animated_sprites:
+				sprite.play("idle_right")
 		elif last_direction.x < 0:
-			body.play("idle_left")
-			top_clothes.play("idle_left")
-			jeans.play("idle_left")
-			head.play("idle_left")
-			haircut.play("idle_left")
+			for sprite in animated_sprites:
+				sprite.play("idle_left")
 
 	# normalize the directional movement
 	direction = direction.normalized()
