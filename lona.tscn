@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bv11epc1aasp"]
+[gd_scene load_steps=21 format=3 uid="uid://bv11epc1aasp"]
 
 [ext_resource type="Texture2D" uid="uid://dvnsvwv27pgcb" path="res://assets/lona_fr_fr/LonaMCC_body.png" id="1_kwwlq"]
 [ext_resource type="Script" uid="uid://j4pux6fxpq48" path="res://scripts/lona.gd" id="1_pt54m"]
@@ -6,6 +6,18 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxosv"]
 atlas = ExtResource("1_kwwlq")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oliw"]
+atlas = ExtResource("1_kwwlq")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc5bq"]
+atlas = ExtResource("1_kwwlq")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hipyf"]
+atlas = ExtResource("1_kwwlq")
+region = Rect2(64, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwwlq"]
 atlas = ExtResource("1_kwwlq")
@@ -64,6 +76,30 @@ animations = [{
 "loop": true,
 "name": &"idle_down",
 "speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oliw")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc5bq")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hipyf")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

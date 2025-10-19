@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1760879670
+::res://::1760884492
 icon.svg::CompressedTexture2D::1723254450736395880::1760823764::1760823771::1::::<><><>0<>0<>0e4ffe6b819aa1c4492be1bc0b788fe9<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 lona.tscn::PackedScene::115166082317826067::1760879601::0::1::::<><><>0<>0<><>::uid://dvnsvwv27pgcb::::res://assets/lona_fr_fr/LonaMCC_body.png<>uid://j4pux6fxpq48::::res://scripts/lona.gd
 main.tscn::PackedScene::1522970029152189034::1760879601::0::1::::<><><>0<>0<><>::uid://bv11epc1aasp::::res://lona.tscn<>uid://b6bnl832kbwb2::::res://assets/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier.png<>uid://bhwpcco0ey8o2::::res://assets/lona_fr_fr/Inside_A5.png<>uid://ch4mr41gskatv::::res://assets/lona_fr_fr/Inside_B.png
 ::res://assets/::1760879601
-::res://assets/lona_fr_fr/::1760879601
+::res://assets/lona_fr_fr/::1760879672
 Inside_A5.png::CompressedTexture2D::2924073354044124571::1760879601::1760879672::1::::<><><>0<>0<>a086f97f89391f0152516c88c9349719<>res://.godot/imported/Inside_A5.png-8c4920eca5fd1ae2823d442b66be765a.ctex::
 Inside_B.png::CompressedTexture2D::5324790753768872395::1760879601::1760879672::1::::<><><>0<>0<>73abf905c959e67685056cc8a025458e<>res://.godot/imported/Inside_B.png-d1511b02137b6562ef45d24a1d5e8006.ctex::
 LonaMCC_body.png::CompressedTexture2D::8661196275047271157::1760879601::1760879672::1::::<><><>0<>0<>4ace9262f41cefa1803c5edb6790e771<>res://.godot/imported/LonaMCC_body.png-d772dc7bb6f886c7e65238c33bb54bf9.ctex::
