@@ -1,0 +1,5 @@
+res://node_2d.tscn
+res://main.tscn
+res://lona.tscn
+res://scripts/collision_shape_2d.gd
+res://scripts/lona.gd
