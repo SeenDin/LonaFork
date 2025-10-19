@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://s0pcgkxiypy5"]
+
+[ext_resource type="Texture2D" uid="uid://ch4mr41gskatv" path="res://assets/lona_fr_fr/Inside_B.png" id="1_6sfst"]
+[ext_resource type="Script" uid="uid://b3j1uk55rt3gn" path="res://scripts/exit.gd" id="1_24kvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24kvk"]
+atlas = ExtResource("1_6sfst")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlcv5"]
+size = Vector2(32, 32)
+
+[node name="Exit" type="Area2D"]
+script = ExtResource("1_24kvk")
+
+[node name="steps" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_24kvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mlcv5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
