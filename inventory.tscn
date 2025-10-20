@@ -1,0 +1,589 @@
+[gd_scene load_steps=5 format=3 uid="uid://bglngtrdo6o3e"]
+
+[ext_resource type="Script" uid="uid://d2d3ne42hqr8v" path="res://scripts/inventory.gd" id="1_psafj"]
+[ext_resource type="Script" uid="uid://ctvesw37rk8w7" path="res://scripts/InventorySlot.gd" id="2_5tt2m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6cpsi"]
+line_spacing = 1.0
+paragraph_spacing = 0.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_tq8yx"]
+line_spacing = 2.0
+paragraph_spacing = 0.2
+
+[node name="Inventory" type="Node"]
+script = ExtResource("1_psafj")
+
+[node name="InventoryWindow" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -68.0
+offset_right = 64.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SlotContainer" type="GridContainer" parent="InventoryWindow"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="Button" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_6cpsi")
+
+[node name="Button2" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button2/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button3" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button3/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button4" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button4/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button5" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button5/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button6" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button6/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button7" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button7/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button8" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button8/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button9" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button9/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button10" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button10/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button11" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button11/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button12" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button12/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button13" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button13/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button14" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button14/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button15" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button15/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button16" type="Button" parent="InventoryWindow/SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("2_5tt2m")
+
+[node name="icon" type="TextureRect" parent="InventoryWindow/SlotContainer/Button16"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="InventoryWindow/SlotContainer/Button16/icon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="InfoText" type="Label" parent="InventoryWindow"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_tq8yx")

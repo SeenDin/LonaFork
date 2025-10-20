@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://bv11epc1aasp"]
+[gd_scene load_steps=110 format=3 uid="uid://bv11epc1aasp"]
 
 [ext_resource type="Texture2D" uid="uid://dvnsvwv27pgcb" path="res://assets/lona_fr_fr/LonaMCC_body.png" id="1_kwwlq"]
 [ext_resource type="Script" uid="uid://j4pux6fxpq48" path="res://scripts/lona.gd" id="1_pt54m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cj6srewnriglw" path="res://assets/lona_fr_fr/LonaMCC_equip_FootmanBot.png" id="4_0hsf1"]
 [ext_resource type="Texture2D" uid="uid://bqjilssjbtpdl" path="res://assets/lona_fr_fr/LonaMCC_head_Happy.png" id="5_kxosv"]
 [ext_resource type="Texture2D" uid="uid://daiju3x2kds8s" path="res://assets/lona_fr_fr/LonaMCC_equip_HairDancer.png" id="6_8higc"]
+[ext_resource type="PackedScene" uid="uid://bglngtrdo6o3e" path="res://inventory.tscn" id="7_xydot"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxosv"]
 atlas = ExtResource("1_kwwlq")
@@ -897,6 +898,7 @@ animations = [{
 }]
 
 [node name="Lona" type="CharacterBody2D"]
+position = Vector2(576, 320)
 script = ExtResource("1_pt54m")
 
 [node name="body" type="AnimatedSprite2D" parent="."]
@@ -931,3 +933,5 @@ frame_progress = 0.869336
 [node name="haircut" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kxosv")
 animation = &"run_down"
+
+[node name="Inventory" parent="." instance=ExtResource("7_xydot")]
