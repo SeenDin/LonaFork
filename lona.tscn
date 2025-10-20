@@ -930,4 +930,4 @@ frame_progress = 0.869336
 
 [node name="haircut" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kxosv")
-animation = &"run_up"
+animation = &"run_down"

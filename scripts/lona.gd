@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+# := means that godot will autimatically set the right datatype
+@export var SPEED := 100.0
+@export var HEALTH := 100.0
+@export var DAMAGE := 5.0
 
 @onready var body: AnimatedSprite2D = $body
 @onready var top_clothes: AnimatedSprite2D = $top_clothes
@@ -8,11 +11,9 @@ const SPEED = 100.0
 @onready var head: AnimatedSprite2D = $head
 @onready var haircut: AnimatedSprite2D = $haircut
 
-var last_direction: Vector2 = Vector2.DOWN
-
 @onready var animated_sprites := [body, top_clothes, jeans, head, haircut]
 
-
+var last_direction: Vector2 = Vector2.DOWN
 
 func _physics_process(delta):
 	# setup direction of movement
@@ -41,7 +42,7 @@ func _physics_process(delta):
 	else:
 		if last_direction.y > 0:
 			for sprite in animated_sprites:
-				sprite.play("run_down")
+				sprite.play("idle_down")
 		elif last_direction.y < 0:
 			for sprite in animated_sprites:
 				sprite.play("idle_up")
