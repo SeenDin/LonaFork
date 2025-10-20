@@ -15,7 +15,7 @@ extends CharacterBody2D
 
 var last_direction: Vector2 = Vector2.DOWN
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# setup direction of movement
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	# stop diagonal movement by listening for input then setting axis to zero
